@@ -1,0 +1,185 @@
+/* libraries */
+@import '_lib/reset';
+@import '_lib/shortcuts';
+@import '_lib/grid';
+@import '_lib/mediaqueries';
+@import '_lib/jquery-ui';
+@import '_lib/animate.less';
+@import 'fonts/museosans/stylesheet';
+
+//	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>
+//	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>
+// Fluid Grid (Semantic.gs)
+
+//@total-width: 100%;
+@column-width: 60;
+@gutter-width: 20;
+@columns: 12;
+
+//	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>
+// Fonts
+.font100i{ font-family:'museo_sans100_italic'; }
+.font100{ font-family:'museo_sans100'; }
+.font500i{ font-family:'museo_sans500_italic'; }
+.font500{ font-family:'museo_sans500'; }
+.font700i{ font-family:'museo_sans700_italic'; }
+.font700{ font-family:'museo_sans700'; }
+.font900i{ font-family:'museo_sans900_italic'; }
+.font900{ font-family:'museo_sans900'; }
+//	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>
+// Colors
+@b: #333; 		//Black
+@w: #fff;		//White
+@db: #826908;    //darkbrown
+@lb: #E0C580;    //lightbrown
+@main: #26A995;    //main blue-green
+@green: #ADD260;
+@pink: #EF5475;
+@yellow: #FFCB04;
+@yellowgreen: #E5E657;
+
+//	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>
+//classes and styles
+
+//	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>
+//	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>
+//	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>
+//	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>
+//	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>
+//	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>
+//	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>
+//	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>
+//	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>
+//Body
+
+body{
+    .font500;
+	background: @green;
+}
+
+
+
+
+.page{
+    width: 768px;
+    min-height: 540px;
+	background: @w;
+    background-repeat: repeat-y ;
+    margin: 0 auto;
+    position:relative;
+    .box-sizing(border-box);
+    padding-top:1px;
+	overflow:hidden;
+    header{
+        background: @w;
+        color: @green;
+        overflow:hidden;
+        position:absolute;
+        left:0; right:0;
+        top: 0; bottom: 0;
+        .border-radius(10px);
+        z-index: 99999;
+        .data{
+            h2{
+                margin-top: 80px;
+                .font900;
+                font-size: 4em;
+                text-align: center;
+            }
+            .datapage{
+                .font500;
+                font-size: 0.9em;
+                text-align: center;
+                color: @lb;
+            }
+        }
+        .instructions{
+            .font500;
+            text-align:center;
+            font-size: 1.2em;
+            margin: 10px 80px;
+			color:@main;
+			
+        }
+		
+		.insimg::before{
+				content:attr(title);
+	            display:block;
+				.font500;
+	            text-align:center;
+	            font-size: 1em;
+	            margin: 10px 8;
+				color:@green;
+		}
+		.campof{
+			position:absolute;
+			left: 10px; bottom: 10px;
+			text-align:left;
+			color:@main;
+			span{color:@green;}
+		}
+		.contenidop{
+			position:absolute;
+			right: 10px; bottom: 10px;
+			text-align:right;
+			color:@main;
+			span{color:@green;}
+		}
+        .goBtn{
+            display: block;
+            width: 140px;
+            height: 140px;
+            z-index:999999;
+            margin: 20px auto;
+            cursor: pointer;
+            background: url(../img/button_go.svg) center no-repeat;
+            &:hover{
+                .shake;
+            }
+        }
+		.insimg{
+			text-align:center;
+		}
+    	&.playing{
+    		background: transparent;
+			top:0; left:0; right:auto;bottom:auto;
+			.border-radius(0px);
+			.data{
+				h2{display:none;}
+			}
+			.instructions{
+				margin:0;
+				.font500;
+				background:@yellowgreen;
+				color:@green/1.2;
+				text-align:left;
+				.box-sizing(border-box);
+				width:768px;
+				padding: 6px 190px 6px 60px;
+				font-size:1.2em;
+				.border-radius(2px 10px);
+				border-bottom:2px solid rgba(0,0,0,0.1);
+			}
+			.goBtn, .insimg, .campof, .contenidop{ display:none;}
+			
+		}
+	}
+    
+}
+
+
+
+
+
+
+
+//	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>
+//	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>
+//	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>
+//	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>
+//	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>
+//	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>
+//	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>
+//	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>
+//	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>
+

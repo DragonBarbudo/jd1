@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="70px"
+	 height="70px" viewBox="0 0 70 70" enable-background="new 0 0 70 70" xml:space="preserve">
+<g id="back">
+	<animateTransform attributeName="transform"
+	            begin="0s" dur="2s"
+	            type="rotate"
+	            from="0 35 35" to="360 35 35"
+	            repeatCount="indefinite" 
+				/>
+	<path fill="#EF5475" d="M16.89,6.575C28.091-0.556,51.642,0.616,62.711,16.66c9.239,13.387,5.993,35.068-5.532,44.329
+		c-16.393,13.165-40.38,4.415-49.357-6.725C-1.166,43.104-1.162,18.067,16.89,6.575z"/>
+</g>
+<g id="front">
+	<path fill="#E5E657" d="M20.843,12.78c8.756-5.574,27.166-4.658,35.818,7.883c7.223,10.464,4.685,27.414-4.324,34.651
+		c-12.814,10.293-31.564,3.451-38.582-5.256C6.729,41.334,6.733,21.763,20.843,12.78z"/>
+	<path fill="#EF5475" d="M35.021,24.537c-1.409-0.399-2.246,2.786-2.529,6.759c-4.153,0.012-11.382,0.152-11.382,0.987
+		c0,1.171-0.768,5.659,0.1,6.05c0.613,0.275,7.399,0.162,11.339,0.071c0.333,3.769,1.162,6.798,2.473,6.677
+		c3.479-0.321,14.495-7.703,14.175-10.001C48.875,32.781,38.271,25.458,35.021,24.537z"/>
+</g>
+</svg>

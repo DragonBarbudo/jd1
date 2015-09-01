@@ -1,0 +1,98 @@
+/* libraries */
+@import '../../../css/_lib/reset';
+@import '../../../css/_lib/shortcuts';
+@import '../../../css/_lib/grid';
+@import '../../../css/_lib/mediaqueries';
+@import '../../../css/_lib/jquery-ui';
+
+//	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>
+/* google fonts */
+
+
+//	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>
+// Fluid Grid (Semantic.gs)
+
+//@total-width: 100%;
+@column-width: 60;
+@gutter-width: 20;
+@columns: 12;
+
+//	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>
+// Fonts
+
+//	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>
+// Colors
+@b: #333; 		//Black
+@w: #f5f5f5;		//White
+
+
+//	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>
+//classes and styles
+
+//	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>
+//	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>
+//	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>
+//	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>
+//	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>
+//	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>
+//	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>
+//	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>
+//	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>
+//Body
+
+body{
+}
+
+.application{
+    position: relative;
+    overflow:hidden;
+    .lista{
+        position: relative;
+        width: 276px;
+        height: 313px;
+        background: url(../img/lista.png) center no-repeat;
+        float:left;
+        margin: 80px 15px 20px 45px;
+        .paloma{
+            width: 15px; height: 15px;
+            background: url(../img/palomita.png) center no-repeat;
+            position:absolute;
+            display: none;
+            &#p1{ left: 78px; top: 114px;}
+            &#p2{ left: 82px; top: 140px;}
+            &#p3{ left: 86px; top: 162px;}
+            &#p4{ left: 90px; top: 184px;}
+        }
+    }
+    .ensalada{
+        float:right;
+        margin: 30px 60px 20px 25px;
+        width: 340px;
+        div{ 
+            width: 140px; height: 140px;  float:left; margin: 5px 15px;
+            cursor:pointer;
+            .opacity(0.5);
+            &:hover{
+                .opacity(0.8);
+            }
+            &.tada{
+                .opacity(1);
+                cursor: auto;
+	            &:after{
+	                content: "";
+	                display: block;
+	                width: 80px; height: 82px;
+					margin:30px;
+	                background-image: url(../../../img/eval_si.svg);
+			background-size: contain;
+	            }
+            }
+        }
+        .elotes{ background: url(../img/elotes.png) center no-repeat; }
+        .papas{ background: url(../img/papas.png) center no-repeat; }
+        .zanahorias{ background: url(../img/zanahorias.png) center no-repeat; }
+        .espinacas{ background: url(../img/espinacas.png) center no-repeat; }
+        .esparragos{ background: url(../img/esparragos.png) center no-repeat; }
+        .ejotes{ background: url(../img/ejotes.png) center no-repeat; }
+    }
+}

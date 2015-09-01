@@ -1,0 +1,113 @@
+/* libraries */
+@import '../../../css/_lib/reset';
+@import '../../../css/_lib/shortcuts';
+@import '../../../css/_lib/grid';
+@import '../../../css/_lib/mediaqueries';
+@import '../../../css/_lib/jquery-ui';
+
+//	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>
+// Fluid Grid (Semantic.gs)
+
+//@total-width: 100%;
+@column-width: 60;
+@gutter-width: 20;
+@columns: 12;
+
+//	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>
+// Fonts
+.agrafiell{
+    font-family: 'agrafiellregular', sans-serif;
+    font-weight: normal;
+}
+.tahoma{
+    font-family: Tahoma, Geneva, sans-serif;
+    font-weight: normal;
+}
+//	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>
+// Colors
+@b: #333; 		//Black
+@w: #f5f5f5;		//White
+
+
+//	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>
+//classes and styles
+
+//	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>
+//	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>
+//	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>
+//	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>
+//	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>
+//	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>
+//	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>
+//	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>
+//	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>
+//Body
+
+.application{
+    position: relative;
+	height:540px;
+	overflow:hidden;
+    .mochilas{
+        width: 700px;
+        margin: 30px auto 0 auto;
+        height: 105px;
+        //position: relative;
+        .mochila{
+            width: 90px;
+            height: 105px;
+            float:left;
+            cursor:pointer;
+            position:absolute;
+            z-index: 100;
+            &#ana{ background: url(../img/mochila_01.png) center no-repeat; left: 30; background-size:contain;}
+            &#angel{ background: url(../img/mochila_02.png) center no-repeat; left: 145px; background-size:contain;}
+            &#alma{ background: url(../img/mochila_03.png) center no-repeat; left: 260px; background-size:contain;}
+            &#alfredo{ background: url(../img/mochila_04.png) center no-repeat; left: 375px; background-size:contain;}
+            &#alicia{ background: url(../img/mochila_05.png) center no-repeat; left: 490px; background-size:contain;}
+            &#alan{ background: url(../img/mochila_06.png) center no-repeat; left: 605px; background-size:contain;}
+			
+            &:hover, &:focus{
+                .shake;
+            }
+        }
+        .mochilaEV{
+            &:after{
+                content: "";
+                display: block;
+                width: 80px; height: 82px;
+                background-image: url(../../../img/eval_si.svg);
+		background-size: contain;
+            }
+        }
+
+    }
+    .lockers{
+        width: 513px;
+        height: 412px;
+        margin: -5px auto;
+        background: url(../img/lockers.png) center no-repeat;
+        //position: relative;
+        .locker{
+            width: 116px;
+            height: 110px;
+            background: transparent;
+            position: absolute;
+            &#l_ana{ top: 230px; left:192px; }
+            &#l_angel{ top: 230px; left:337px; }
+            &#l_alicia{ top: 230px; left:482px; }
+            &#l_alan{ top: 378px; left:192px; }
+            &#l_alma{ top: 378px; left:337px; }
+            &#l_alfredo{ top: 378px; left:482px; }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+

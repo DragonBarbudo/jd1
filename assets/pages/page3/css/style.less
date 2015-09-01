@@ -1,0 +1,104 @@
+/* libraries */
+@import '../../../css/_lib/reset';
+@import '../../../css/_lib/shortcuts';
+@import '../../../css/_lib/grid';
+@import '../../../css/_lib/mediaqueries';
+@import '../../../css/_lib/jquery-ui';
+
+//	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>
+/* google fonts */
+
+
+//	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>
+// Fluid Grid (Semantic.gs)
+
+//@total-width: 100%;
+@column-width: 60;
+@gutter-width: 20;
+@columns: 12;
+
+//	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>
+// Fonts
+
+//	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>
+// Colors
+@b: #333; 		//Black
+@w: #fff;		//White
+
+
+//	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>
+//classes and styles
+
+//	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>
+//	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>
+//	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>
+//	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>
+//	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>
+//	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>
+//	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>
+//	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>
+//	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>
+//Body
+
+body{
+
+}
+
+.application{
+    overflow:hidden;
+    height:540px;
+}
+
+.wrapper{
+    width:100%;  margin: 0 auto;
+    .historia{
+        width: 1474px/4;
+        height: 560px;
+        background: url(../img/historia.jpg) right no-repeat;
+        position:absolute;
+        right:0px;
+        top:-15px;
+        .border-radius(8px);
+    }
+    
+    .drags{
+        margin-left:40px;
+		margin-top:100px;
+        width:800px;
+        height:560px;
+    }
+    .lobo,.casa,.cerdito{
+        width:66px; height: 200px;
+        position:relative;
+        float:left;
+        &.floating{ .floating; cursor:pointer; &:hover{.shake;} }
+        &.lobo{ background: url(../img/lobo.png) left no-repeat; left:30px; top:0px; }
+        &.cerdito{ background: url(../img/cerdito.png) left no-repeat; left:0; top:100px; }
+        &.casa{ background: url(../img/casa.png) left no-repeat; left:60px; top:150px; }
+    }
+    
+            
+            .rightAnswer{
+                &:after{
+                    content: "";
+                    display: block;
+                    margin:60px 0;
+                    width: 80px; height: 82px;
+                    .scale(0.8);
+                    background-image: url(../../../img/eval_si.svg);
+                    background-size: contain;
+                    background-repeat:no-repeat;
+                }
+            }
+            
+            .dropper{
+                width:66px; height: 200px; position:absolute;
+                .border-radius(0px 20px 20px 0px);
+                border: @w dashed 2px;
+                .box-sizing(border-box);
+                &#loboD{ left: 524px; top: 102px; }
+                &#casaD{ left: 690px; top: 104px; }
+                &#cerditoD{ left: 603px; top: 310px; }
+            }
+            
+}
